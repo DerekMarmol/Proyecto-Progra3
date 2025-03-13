@@ -21,6 +21,19 @@ Este documento contiene la información necesaria para entender, configurar y ut
 - **Validators/**: Validadores de entrada
 - **Infrastructure/Docker/**: Configuración de Docker
 
+## Estructura de ramas
+
+El repositorio utiliza el siguiente esquema de ramas:
+
+- `master`: Versión estable y producción
+- `develop`: Integración de cambios para pruebas
+- `backend-api`: Implementación de la API Principal (Persona 1)
+- `frontend-ecommerce`: Desarrollo del frontend y API E-Commerce (Persona 2)
+- `async-messaging`: Implementación del sistema asíncrono (Persona 3)
+- `testing-docs`: Pruebas y documentación (Persona 4)
+
+La implementación actual de la API Principal se encuentra en la rama `backend-api` y debe ser fusionada con `develop` para integración.
+
 ## Configuración inicial
 
 ### Requisitos previos
