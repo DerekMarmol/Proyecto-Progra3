@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: superbodega-db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrongPassword123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - superbodega-data:/var/opt/mssql
+    networks:
+      - superbodega-network
+
+networks:
+  superbodega-network:
+    driver: bridge
+
+volumes:
+  superbodega-data:
